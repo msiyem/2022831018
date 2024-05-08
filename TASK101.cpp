@@ -40,10 +40,19 @@ void  event_loop()
 {
   SDL_Event event;
 
-  while(SDL_PollEvent(&event))
-     {
-       if(event.type==SDL_QUIT) {gameIsRunning=false; break;}
-     }
+ while (SDL_PollEvent(&event)) {
+    switch (event.type) {
+        case SDL_QUIT:
+            gameIsRunning = false;
+            break;
+        case SDL_KEYDOWN: 
+            break;
+        case SDL_MOUSEBUTTONDOWN:
+            break;
+        default:
+            break;
+    }
+}
 
 }
 
@@ -65,9 +74,9 @@ gameIsRunning=initializing();
 while(gameIsRunning)
 {
 	event_loop();
-    SDL_SetRenderDrawColor(rend, 50, 255, 200, 50);
+    SDL_SetRenderDrawColor(rend, 0, 0, 0, 255);
 	SDL_RenderClear(rend);
-	SDL_SetRenderDrawColor(rend, 250, 0, 0, 0);
+	SDL_SetRenderDrawColor(rend, 255, 255, 0, 255);
     draw_Circle(SCREEN_WIDTH/2,SCREEN_HEIGHT/2,R);
 	SDL_RenderPresent(rend);
 }

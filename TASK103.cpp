@@ -89,7 +89,7 @@ void draw_Circle( int centerX, int centerY, int radius) {
 void Draw()
 {
 
-    SDL_SetRenderDrawColor(rend, 0, 255, 0, 0);
+    SDL_SetRenderDrawColor(rend, 0, 0, 0, 255);
 	SDL_RenderClear(rend);
 
     update();
