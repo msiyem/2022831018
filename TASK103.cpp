@@ -114,25 +114,25 @@ void  event_loop()
                         if(event.key.keysym.sym==SDLK_UP) 
                         {
                             y-=10;
-                            if(y==R) {x=SCREEN_WIDTH/2;y=SCREEN_HEIGHT-R;}
+                            if(y==R) {x=x; y=SCREEN_HEIGHT-R;}
                         }
                         if(event.key.keysym.sym== SDLK_DOWN)
                         {
                              y+=10;
-                            if(y+R>SCREEN_HEIGHT) {x=SCREEN_WIDTH/2;y=SCREEN_HEIGHT-R;}
+                            if(y+R>SCREEN_HEIGHT) {x=x; y=R;}
 
                         }
                         if(event.key.keysym.sym== SDLK_LEFT)
                         {
                             x-=10;
-                            if(x==R) {x=SCREEN_WIDTH/2;y=SCREEN_HEIGHT-R;}
+                            if(x==R) {x=SCREEN_WIDTH-R;y=y;}
                              
                         }
                         if(event.key.keysym.sym==SDLK_RIGHT)
                         {
                           
                             x+=10;
-                            if(x+R==SCREEN_WIDTH) {x=SCREEN_WIDTH/2;y=SCREEN_HEIGHT-R;}
+                            if(x+R==SCREEN_WIDTH) {x=R;y=y;}
                         }
                     }
      

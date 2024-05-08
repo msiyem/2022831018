@@ -67,7 +67,7 @@ void draw_Circle( int centerX, int centerY, int radius) {
     }
 }
 void updating_radious(){
-    R+=2;
+    R+=5;
     if(R>=SCREEN_HEIGHT/2) R=0;
 }
 
