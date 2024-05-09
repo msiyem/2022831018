@@ -67,7 +67,7 @@ void draw_Circle( int centerX, int centerY, int radius) {
     }
 }
 void updating_radious(){
-    R+=5;
+    R+=10;
     if(R>=SCREEN_HEIGHT/2) R=0;
 }
 
@@ -79,10 +79,10 @@ gameIsRunning=initializing();
 while(gameIsRunning)
 {
 	event_loop();
-    SDL_SetRenderDrawColor(rend, 0, 0, 0, 255);
+    SDL_SetRenderDrawColor(rend, 0, 255, 0, 255);
 	SDL_RenderClear(rend);
     updating_radious();
-	SDL_SetRenderDrawColor(rend, 255, 255, 0, 255);
+	SDL_SetRenderDrawColor(rend, 255, 0, 0, 255);
     draw_Circle(SCREEN_WIDTH/2,SCREEN_HEIGHT/2,R);
 	SDL_RenderPresent(rend);
     

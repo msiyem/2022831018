@@ -4,7 +4,7 @@
 
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 700
-#define R 150
+#define R 250
 SDL_Window *win = NULL;
 SDL_Renderer *rend = NULL;
 bool gameIsRunning=false;
@@ -74,9 +74,9 @@ gameIsRunning=initializing();
 while(gameIsRunning)
 {
 	event_loop();
-    SDL_SetRenderDrawColor(rend, 0, 0, 0, 255);
+    SDL_SetRenderDrawColor(rend, 0, 255, 0, 255);
 	SDL_RenderClear(rend);
-	SDL_SetRenderDrawColor(rend, 255, 255, 0, 255);
+	SDL_SetRenderDrawColor(rend, 255, 0, 0, 255);
     draw_Circle(SCREEN_WIDTH/2,SCREEN_HEIGHT/2,R);
 	SDL_RenderPresent(rend);
 }
