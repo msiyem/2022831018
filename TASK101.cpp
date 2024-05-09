@@ -74,7 +74,7 @@ gameIsRunning=initializing();
 while(gameIsRunning)
 {
 	event_loop();
-    SDL_SetRenderDrawColor(rend, 0, 255, 0, 255);
+    SDL_SetRenderDrawColor(rend, 0, 0, 0, 255);
 	SDL_RenderClear(rend);
 	SDL_SetRenderDrawColor(rend, 255, 0, 0, 255);
     draw_Circle(SCREEN_WIDTH/2,SCREEN_HEIGHT/2,R);
